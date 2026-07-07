@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mission Polaris</title>
+
+<style>
+body{
+margin:0;
+background:#020617;
+color:white;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:.3;
+animation:move 80s linear infinite;
+}
+
+@keyframes move{
+from{transform:translateY(0);}
+to{transform:translateY(600px);}
+}
+
+.card{
+position:relative;
+z-index:2;
+max-width:700px;
+text-align:center;
+padding:40px;
+background:rgba(0,0,0,.55);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+h1{
+font-size:40px;
+letter-spacing:4px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
+margin-top:30px;
+}
+
+#message{
+display:none;
+margin-top:30px;
+font-size:22px;
+line-height:1.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+
+<h1>MISSION POLARIS</h1>
+
+<p>
+NASA Secure Communication Portal
+</p>
+
+<button onclick="launch()">
+Authorize Mission
+</button>
+
+<div id="message">
+
+<h2>ACCESS GRANTED</h2>
+
+<p>
+
+Some people arrive unexpectedly,
+yet somehow they feel like they've been written into your story long before you met them.
+
+This isn't really a NASA mission.
+
+It's my little way of saying that meeting you has become one of my favourite discoveries.
+
+No telescope could have prepared me for finding someone who makes ordinary days feel a little brighter.
+
+Mission Status:
+
+❤️ Ongoing
+
+Destination:
+
+Wherever life takes us.
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+function launch(){
+document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
